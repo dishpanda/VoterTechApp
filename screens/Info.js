@@ -6,7 +6,7 @@ function InfoScreen() {
     return (
       <View style={{ flex: 1, justifyContent: "start", alignItems: "center" }}>
         <Text>Information!</Text>
-        <Rectangle1> <Text> Hi</Text> </Rectangle1>
+        <Rectangle1> </Rectangle1>
       </View>
     );
   }
