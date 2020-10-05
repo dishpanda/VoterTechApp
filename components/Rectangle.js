@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     containeri: {
         width:"100%",
         height: "100%",
-        tintColor: "",
+        tintColor: "blue",
     },
     innertext: {
         marginTop: "1%",
