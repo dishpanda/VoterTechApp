@@ -22,7 +22,7 @@ function Rectangle1() {
             <View style={styles.Rectangle}>
                 <ImageBackground source ={require("../assets/voting.jpg")} style ={styles.containeri}>
                 <View style={{ justifyContent: "flex-start", alignItems: "center" }}> 
-                    <Text style={styles.innertext}>Request Absentee Ballot</Text>
+                    <Text style={styles.innertext}>Request Absentee Ballot!</Text>
                 </View> 
                 </ImageBackground>
             </View>
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     containeri: {
         width:"100%",
         height: "100%",
-        backgroundColor: "lightblue",
+        tintColor: "",
     },
     innertext: {
         marginTop: "1%",
