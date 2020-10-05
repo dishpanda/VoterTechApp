@@ -1,6 +1,6 @@
 import React, { Component, useState, useRef, useEffect } from 'react'
+import { StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
 import { render } from 'react-dom';
-import "../styles/styles.sass"
 
 const Timer = () => {
     const [timerDays, setTimerDays] = useState('00');
@@ -43,20 +43,46 @@ const Timer = () => {
     }); //instantiating, componentDidMount
 
     return (
-        <div>
-            <section className="timer-container">
-                <section className = "timer">
-                    <div>
-                        <h2 style={{justifyContent: "center", alignSelf: 'center' }}>Time Left:</h2>
-                    </div>
-                </section>
-            </section>
-
-            <section className= "timer-circle">
-                <h1>{timerDays} Days: {timerHours} Hours : {timerMinutes} Minutes: {timerSeconds} Seconds </h1>
-            </section>
-        </div>
+        <View style={styles.timerContainer}>
+            <Text style = {styles.timeTitle}>
+                Time Left:
+            </Text>
+        
+            <Text style = {styles.timeLeft}>
+                {timerDays} Days {"\n"}{timerHours} Hours {"\n"}{timerMinutes} Minutes {"\n"}{timerSeconds} Seconds 
+            </Text>
+        </View>
     )
 };
+
+const styles = StyleSheet.create({
+   
+    timerContainer: {
+        width: "125px",
+        height: "125px",
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#003057',
+        borderRadius: "50%",
+        padding: "5px"
+           
+    }, 
+
+    timeTitle: {
+        fontWeight: "bold",
+        color: '#FFFFFF',
+        textAlign: "center",
+        fontSize: "14px",
+    },
+
+    timeLeft: {
+        color: '#FFFFFF',
+        fontSize: "10px",
+        textAlign: "center"
+
+    }
+
+});
+
 
 export default Timer
