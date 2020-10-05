@@ -1,15 +1,15 @@
 import * as React from "react";
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
 
 function Rectangle1() {
     return (
         <View style={styles.container}>
        
-            <View style={styles.Rectangle} >
+            <ImageBackground src ={require("../assets/ballot.jpg")} style={styles.Rectangle} >
                 <View style={{ flex: 1, justifyContent: "start", alignItems: "center" }}> 
                     <Text>Check Voter Eligibility</Text>
-                </View>
-            </View>
+                </View>  
+            </ImageBackground>
             <View style={styles.Rectangle} />
             <View style={styles.Rectangle} />
      
