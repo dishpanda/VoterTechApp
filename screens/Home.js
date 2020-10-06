@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Text, View } from "react-native";
+import { Timer } from "../components/Components"
 
 function HomeScreen() {
   return (
@@ -8,6 +9,8 @@ function HomeScreen() {
         Voter
         <Text style={{ color: "#EAAA00" }}>Tech</Text>
       </Text>
+      <span class="circle"></span>
+      <Timer />
     </View>
   );
 }
