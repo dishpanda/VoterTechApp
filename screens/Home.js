@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Text, View } from "react-native";
 import { Timer } from "../components/Components"
-import "../styles/styles.sass"
 
 function HomeScreen() {
   return (
