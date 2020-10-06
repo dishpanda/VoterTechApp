@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         fontSize: "14px",
     },
 
-    timeLeft: {
+    timeLeft: { 
         color: '#FFFFFF',
         fontSize: "10px",
         textAlign: "center"
