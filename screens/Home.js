@@ -9,7 +9,7 @@ function HomeScreen() {
         Voter
         <Text style={{ color: "#EAAA00" }}>Tech</Text>
       </Text>
-      <span class="circle"></span>
+      <span class="Circle"></span>
       <Timer />
     </View>
   );

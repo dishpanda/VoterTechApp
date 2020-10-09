@@ -63,9 +63,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: '#003057',
-        borderRadius: "50%",
+        borderRadius: 50,
         top: "40%",
         bottom: "60%"
+
 
            
     }, 
@@ -74,12 +75,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         color: '#FFFFFF',
         textAlign: "center",
-        fontSize: "14px",
+        fontSize: 14,
     },
 
     timeLeft: {
         color: '#FFFFFF',
-        fontSize: "10px",
+        fontSize: 10,
         textAlign: "center"
 
     }
