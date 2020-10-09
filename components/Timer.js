@@ -60,11 +60,14 @@ const styles = StyleSheet.create({
     timerContainer: {
         width: "125px",
         height: "125px",
-        alignItems: 'center',
-        justifyContent: 'center',
+        alignItems: "center",
+        justifyContent: "center",
         backgroundColor: '#003057',
-        borderRadius: 62.5,
-        padding: "5px"
+        borderRadius: 50,
+        top: "40%",
+        bottom: "60%"
+
+
            
     }, 
 
