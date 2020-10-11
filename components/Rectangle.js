@@ -6,7 +6,7 @@ function Rectangle1() {
     return (
         <View style={styles.container}>
             
-            <View style={styles.Rectangle} onPress={() => Linking.openURL('https://www.vote.org/am-i-registered-to-vote/')}>
+            <View style={styles.Rectangle}>
                 <ImageBackground source ={require("../assets/ballot.jpg")} style ={styles.containeri}>
                 <View style={{ justifyContent: "flex-start", alignItems: "center" }}> 
                     <Text style={styles.innertext}
@@ -40,9 +40,9 @@ function Rectangle1() {
 const styles = StyleSheet.create({
 
     container: {
-      width: "100%",
+      width: "50%",
       height: "90%",
-      alignItems: 'center',
+      alignItems: 'flex-start',
       backgroundColor: '#F5FCFF',
       flex: 1,
       marginTop: "20%",
