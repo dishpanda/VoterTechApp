@@ -6,7 +6,6 @@ function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <TopHeader my="false" />
-      <span class="Circle"></span>
       <Timer />
     </View>
   );

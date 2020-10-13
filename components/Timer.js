@@ -58,8 +58,8 @@ const Timer = () => {
 const styles = StyleSheet.create({
    
     timerContainer: {
-        width: "125px",
-        height: "125px",
+        width: 125,
+        height: 125,
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: '#003057',
