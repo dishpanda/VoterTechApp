@@ -5,8 +5,9 @@ import Badge from "../components/Badge"
 
 function GameScreen() {
     return (
-      <View style={{ flex: 1, justifyContent: "start", alignItems: "center" }}>
-     <Badge></Badge>
+      <View style={{ flex: 1, justifyContent: "start", alignItems: "top" }}>
+        <Header></Header>
+        <Badge></Badge>
      </View>
     );
   }
