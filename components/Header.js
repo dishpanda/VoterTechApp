@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     containerHeader: {
       flex: 1,
       flexDirection: "column",
-      justifyContent: "center",
+      justifyContent: "flex-start",
       alignItems: "center"
     },
     textContainer: {
-      marginTop: 70
+      marginTop: 10
     },
     textWhite: {
       color: "black",
