@@ -31,6 +31,15 @@ function Rectangle1() {
                 </View> 
                 </ImageBackground>
             </View>
+            <View style={styles.Rectangle}>
+                <ImageBackground source ={require("../assets/absentee.jpg")} style ={styles.containeri}>
+                <View style={{ justifyContent: "flex-start", alignItems: "center" }}> 
+                    <Text style={styles.innertext}
+                    onPress={() => Linking.openURL("https://www.google.com/maps/d/u/0/viewer?mid=12mP2xtRkBBgJq48WfZfUjoktDl0h9vq_&ll=33.43196831012052%2C-81.99759565461036&z=11")}>
+                        Absentee Ballot locations near you!</Text>
+                </View> 
+                </ImageBackground>
+            </View>
      
         </View>
     );
@@ -49,7 +58,7 @@ const styles = StyleSheet.create({
     },
     Rectangle: {
       width: "90%",
-      height: "30%",
+      height: "25%",
       marginBottom: "5%",
       flex: 1,
     },
