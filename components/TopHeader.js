@@ -26,7 +26,7 @@ const TopHeader = (props) => {
             fontWeight: "bold",
             color: "#003057",
             fontSize: 50,
-            justifyContent: "top",
+            justifyContent: "flex-start",
           }}
         >
           Voter

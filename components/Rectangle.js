@@ -49,9 +49,9 @@ function Rectangle1() {
 const styles = StyleSheet.create({
 
     container: {
-      width: "50%",
+      width: "90%",
       height: "90%",
-      alignItems: 'flex-start',
+      alignItems: 'center',
       backgroundColor: '#F5FCFF',
       flex: 1,
       marginTop: "20%",
