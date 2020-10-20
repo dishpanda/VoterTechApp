@@ -17,7 +17,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.votertech",
+      "config": {
+        "googleMapsApiKey": "AIzaSyCuCBXKkuiVEKo5RwmEPRe-aztq5Hja0mU"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
