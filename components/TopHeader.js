@@ -20,7 +20,7 @@ const TopHeader = (props) => {
     );
   } else {
     return (
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View style={{ flex: 1, alignItems: "center", marginTop: 15 }}>
         <Text
           style={{
             fontWeight: "bold",
