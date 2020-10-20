@@ -32,10 +32,13 @@ const Toggle = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  width: "60%",
+  height: "80%",
+  alignItems: 'flex-start',
+  flex: 1,
+  padding: 8,
+  marginTop: "50%"
+  }
 });
 
 export default Toggle;
