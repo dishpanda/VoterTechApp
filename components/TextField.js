@@ -10,6 +10,10 @@ export default function Textfield() {
 
     return (
       <View style={styles.container}>
+        <Text style={{fontWeight: "bold"}}>
+          This form is not required to be filled out.
+          Also, the information collected is not stored.
+        </Text>
         <Text>Name</Text>
         <TextInput style ={styles.input}
             placeholder="First,Last name"
