@@ -39,13 +39,6 @@ const styles = StyleSheet.create({
   padding: 8,
   marginTop: "10%"
   },
-  textContainer: {
-    marginTop: 10
-  },
-  textWhite: {
-    color: "black",
-    marginVertical: 10
-  },
 });
 
 export default Toggle;
