@@ -12,7 +12,7 @@ const Toggle = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 2}}>
+    <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         {/*To show Switch state*/}
         <Text>
@@ -21,7 +21,7 @@ const Toggle = () => {
         {/*Setting the default value of state*/}
         {/*On change of switch onValueChange will be triggered*/}
         <Switch
-          style={{marginTop: 30}}
+          style={{marginTop: 100}}
           onValueChange={toggleSwitch}
           value={switchValue}
         />
@@ -33,12 +33,12 @@ const Toggle = () => {
 const styles = StyleSheet.create({
   container: {
   width: "60%",
-  height: "80%",
+  height: "50%",
   alignItems: 'flex-start',
   flex: 1,
   padding: 8,
-  marginTop: "50%"
-  }
+  marginTop: "10%"
+  },
 });
 
 export default Toggle;

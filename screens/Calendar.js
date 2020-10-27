@@ -5,9 +5,12 @@ import { MonthCal2, TopHeader } from "../components/Components";
 function CalendarScreen() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-        <TopHeader my="false" />
+        <View style={{ flex: 1, justifyContent: "flex-start", alignItems: "center" }}>
+        <TopHeader my="false" /> 
+        </View>
         <MonthCal2/>
       </View>
+      
       
     );
   }

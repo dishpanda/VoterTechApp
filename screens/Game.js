@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ToggleSwitch, TopHeader } from "../components/Components";
+import { Badge, ToggleSwitch, TopHeader } from "../components/Components";
 import { Text, View } from "react-native";
-import Badge from "../components/Badge"
+import BadgeBox1 from "../components/BadgeBox"
 import {
   Switch,
   SafeAreaView,
@@ -10,9 +10,10 @@ import {
 
 function GameScreen() {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
         <TopHeader></TopHeader>
         <Switch></Switch>
+        <BadgeBox1></BadgeBox1>
      </View>
     );
   }

@@ -52,9 +52,10 @@ const styles = StyleSheet.create({
       width: "90%",
       height: "90%",
       alignItems: 'center',
+      justifyContent: "center",
       backgroundColor: '#F5FCFF',
       flex: 1,
-      marginTop: "20%",
+      marginTop: "10%",
     },
     Rectangle: {
       width: "90%",
