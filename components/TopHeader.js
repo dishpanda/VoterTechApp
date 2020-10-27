@@ -4,7 +4,7 @@ import { StyleSheet, View, Text, ImageBackground, Linking } from "react-native";
 const TopHeader = (props) => {
   if (props.my == "true") {
     return (
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View style={{ flex: 1, alignItems: "center", marginTop: 30 }}>
         <Text
           style={{
             fontWeight: "bold",
@@ -27,6 +27,7 @@ const TopHeader = (props) => {
             color: "#003057",
             fontSize: 50,
             justifyContent: "flex-start",
+            marginTop: 30
           }}
         >
           Voter
