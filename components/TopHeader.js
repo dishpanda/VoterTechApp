@@ -10,7 +10,7 @@ const TopHeader = (props) => {
             fontWeight: "bold",
             color: "#003057",
             fontSize: 50,
-            justifyContent: "top",
+            justifyContent: "flex-start",
           }}
         >
           MyVoter
@@ -20,13 +20,13 @@ const TopHeader = (props) => {
     );
   } else {
     return (
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View >
         <Text
           style={{
             fontWeight: "bold",
             color: "#003057",
             fontSize: 50,
-            justifyContent: "top",
+            justifyContent: "flex-start",
           }}
         >
           Voter
