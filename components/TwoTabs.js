@@ -1,9 +1,25 @@
 import React from "react";
-import { View, Text, TouchableOpacity, Animated, ScrollView, Image, Dimensions} from "react-native";
+import { View, Text, TouchableOpacity, Animated, ScrollView, Image, Dimensions, FlatList, StyleSheet} from "react-native";
 
 const { width } = Dimensions.get('window');
+const badges = [{key: '1'}, {key: '2'}, {key: '3'}, {key: '4'}, {key: '5'}, {key: '6'}, {key: '7'}, {key: '8'}, {key: '9'}]
+const numColumns = 3
+const WIDTH = Dimensions.get('window').width
 
 export default class TwoTabs extends React.Component {
+
+    formatData = (data, numColumns) => {
+        const totalRows = Math.floor(data.length / numColumns)
+        let totalLastRow = dataList.length - (totalRows * numColumns)
+
+        while (totalLastRow !== 0 && totalLastRow !== numColumns) {
+            dataList.push({key: 'blank', empty: true})
+            totalLastRow++ 
+        }
+
+        return dataList
+    }
+
     state = {
         active: 0,
         xTabOne: 0,
@@ -52,6 +68,25 @@ export default class TwoTabs extends React.Component {
         }
     };
 
+
+    _renderItem = ({item, index}) => {
+        let {itemStyle, itemText} = styles
+        return (
+            <View style={itemStyle}>
+                <Text style={styles.itemText}>{item.key}</Text>
+                <Image 
+                    source={require('../assets/voting.jpg')}
+                    style={{
+                        width: 60, 
+                        height: 60, 
+                        borderRadius: 60,
+                        margin: 20}}>
+                </Image>
+
+            </View>
+        )
+    }
+
     render() {
         let {
             xTabOne,
@@ -62,6 +97,7 @@ export default class TwoTabs extends React.Component {
             translateXTabTwo,
             translateY
         } = this.state;
+        let {container, itemText} = styles;
         return (
             <View style={{ flex: 1 }}>
                 <View
@@ -181,14 +217,15 @@ export default class TwoTabs extends React.Component {
                             }
                         >
                             <Text>Hello, here are the badges you've earned so far!</Text>
-                            <View 
-                                style={{
-                                    flexDirection:"row",
-                                    alignItems: "left"
-
-                            }}>
-                            
-                                <Image 
+                            <View style={container}>
+                                <FlatList 
+                                    data={badges}
+                                    renderItem={this._renderItem}
+                                    keyExtractor={(item, index) => index.toString()}
+                                    numColumns={numColumns}
+                                    ></FlatList>
+                                
+                                {/* <Image 
                                     source={require('../assets/voting.jpg')}
                                     style={{
                                         width: 60, 
@@ -213,7 +250,7 @@ export default class TwoTabs extends React.Component {
                                         borderRadius: 60,
                                         margin: 20}}>
 
-                                </Image>
+                                </Image> */}
                                 
                                     
                             
@@ -246,3 +283,30 @@ export default class TwoTabs extends React.Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+   
+    container: {
+        flex: 1,
+        width: Dimensions.get('window').width,
+        paddingTop: 30,
+        paddingLeft: 10,
+        paddingRight: 10
+    },
+    itemStyle: {
+        backgroundColor: '#003057',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 130, 
+        flex: 1,
+        opacity: 0.8,
+        margin: 1
+
+    },
+    itemText: {
+        fontSize: 20,
+        color: '#FFFFFF',
+        paddingBottom: 0
+    },
+
+});
