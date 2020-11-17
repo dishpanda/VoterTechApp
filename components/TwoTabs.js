@@ -1,10 +1,15 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Animated, ScrollView, Image, Dimensions, FlatList, StyleSheet} from "react-native";
+import { ProgressBar } from "./Components"
+import * as Progress from 'react-native-progress';
+
 
 const { width } = Dimensions.get('window');
 const badges = [{key: '1'}, {key: '2'}, {key: '3'}, {key: '4'}, {key: '5'}, {key: '6'}, {key: '7'}, {key: '8'}, {key: '9'}]
 const numColumns = 3
 const WIDTH = Dimensions.get('window').width
+const barWidth = Dimensions.get('screen').width - 30;
+
 
 export default class TwoTabs extends React.Component {
 
@@ -41,28 +46,33 @@ export default class TwoTabs extends React.Component {
         } = this.state;
         Animated.spring(translateX, {
             toValue: type,
-            duration: 100
+            duration: 100,
+            useNativeDriver: true
         }).start();
         if (active === 0) {
             Animated.parallel([
                 Animated.spring(translateXTabOne, {
                     toValue: 0,
-                    duration: 100
+                    duration: 100,
+                    useNativeDriver: true
                 }).start(),
                 Animated.spring(translateXTabTwo, {
                     toValue: width,
-                    duration: 100
+                    duration: 100,
+                    useNativeDriver: true
                 }).start()
             ]);
         } else {
             Animated.parallel([
                 Animated.spring(translateXTabOne, {
                     toValue: -width,
-                    duration: 100
+                    duration: 100,
+                    useNativeDriver: true
                 }).start(),
                 Animated.spring(translateXTabTwo, {
                     toValue: 0,
-                    duration: 100
+                    duration: 100,
+                    useNativeDriver: true
                 }).start()
             ]);
         }
@@ -112,6 +122,8 @@ export default class TwoTabs extends React.Component {
                             flexDirection: 'row',
                             marginTop: 10,
                             marginBottom: 20,
+                            marginLeft: 20,
+                            marginRight: 20,
                             height: 36,
                             position: 'relative',
                             width: Dimensions.get('window').width - 40, //the auto didnt adjust to the iphone screen so did it 
@@ -223,6 +235,7 @@ export default class TwoTabs extends React.Component {
                                     renderItem={this._renderItem}
                                     keyExtractor={(item, index) => index.toString()}
                                     numColumns={numColumns}
+                                    style={styles.flatList}
                                     ></FlatList>
                                 
                                 {/* <Image 
@@ -273,7 +286,57 @@ export default class TwoTabs extends React.Component {
                                 ]
                             }}
                         >
-                            <Text>Here is your progress.</Text>
+                            <Text style={styles.progTitle}>Here is your progress...</Text>
+                            <Text style={styles.progbarTitle}>Set-up</Text>
+
+                            {/* <ProgressBar progress={0.3}/> */}
+                            <Progress.Bar 
+                                progress={1} 
+                                width={barWidth} 
+                                height={50}
+                                animate={true}
+                                animationType='timing'
+                                borderRadius='9'
+                                style={styles.progressBar}
+                                color="#003057"> 
+                                    
+                            </Progress.Bar>
+                            <Text style={styles.progbarTitle}>Voting</Text>
+                            <Progress.Bar 
+                                progress={0.5} 
+                                width={barWidth} 
+                                height={50}
+                                animate={true}
+                                animationType='timing'
+                                style={styles.progressBar}
+                                borderRadius='9'
+                                color="#003057"> 
+                                    
+                            </Progress.Bar>
+                            {/* <ProgressBar/> */}
+                            <Text style={styles.progbarTitle}>Active Involvement</Text>
+                            {/* <Progress.Bar 
+                                progress={0.1} 
+                                width={barWidth} 
+                                height={50}
+                                animate={true}
+                                animationType='timing'
+                                borderRadius='9'
+                                color="#003057"
+                                style={styles.progressBar}
+                                /> */}
+                            <ProgressBar/>
+                            <Text style={styles.progbarTitle}>Political Interest</Text>
+                            <Progress.Bar 
+                                progress={0.3} 
+                                width={barWidth} 
+                                height={50}
+                                animate={true}
+                                animationType='timing'
+                                borderRadius='9'
+                                color="#003057"
+                                style={styles.progressBar}
+                                />
                             <View style={{ marginTop: 20 }}>
                             </View>
                         </Animated.View>
@@ -291,7 +354,7 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         paddingTop: 30,
         paddingLeft: 10,
-        paddingRight: 10
+        paddingRight: 10,
     },
     itemStyle: {
         backgroundColor: '#003057',
@@ -308,5 +371,24 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         paddingBottom: 0
     },
+    progTitle: {
+        fontSize: 30,
+        paddingTop: 0,
+        paddingLeft: 10,
+        paddingRight: 10,
+        marginBottom: 20
+
+    },
+    progbarTitle: {
+        fontSize: 15,
+        fontWeight: 'bold'
+    },
+    progressBar: {
+        marginBottom: 10,
+        marginTop: 10
+    },
+    flatList: {
+        borderRadius: 3
+    }
 
 });

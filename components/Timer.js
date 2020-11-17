@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     bottom: "60%",
     marginHorizontal: "auto",
     marginVertical: "auto",
-    position: "sticky"
+    position: "absolute"
   },
 
   timeTitle: {

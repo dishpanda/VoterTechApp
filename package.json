@@ -22,6 +22,8 @@
     "react-native-calendars": "^1.403.0",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-maps": "0.27.1",
+    "react-native-progress": "^4.1.2",
+    "react-native-progress-bar-animated": "^1.0.6",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "3.1.4",
     "react-native-screens": "^2.11.0",
